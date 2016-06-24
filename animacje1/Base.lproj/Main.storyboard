@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animacje1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witam!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFZ-6J-Rnn">
+                                <rect key="frame" x="255" y="159" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="GV3-k5-hsz"/>
+                                    <constraint firstAttribute="height" constant="31" id="vyJ-fs-xku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A to będzie się animować" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7q-5E-bdI">
+                                <rect key="frame" x="150" y="218" width="300" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Nrp-OE-jWn"/>
+                                    <constraint firstAttribute="width" constant="300" id="ape-hF-2XK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hejka! :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-iX-yd9">
+                                <rect key="frame" x="150" y="296" width="300" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5yL-iX-yd9" secondAttribute="bottom" constant="245" id="1KQ-Fd-Wvf"/>
+                            <constraint firstItem="5yL-iX-yd9" firstAttribute="top" secondItem="h7q-5E-bdI" secondAttribute="bottom" constant="19" id="KKK-ma-jgg"/>
+                            <constraint firstItem="h7q-5E-bdI" firstAttribute="top" secondItem="PFZ-6J-Rnn" secondAttribute="bottom" constant="28" id="V5B-7j-4Tz"/>
+                            <constraint firstItem="PFZ-6J-Rnn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="139" id="X8P-hJ-M2o"/>
+                            <constraint firstItem="h7q-5E-bdI" firstAttribute="leading" secondItem="5yL-iX-yd9" secondAttribute="leading" id="bfm-nz-Xhw"/>
+                            <constraint firstItem="h7q-5E-bdI" firstAttribute="trailing" secondItem="5yL-iX-yd9" secondAttribute="trailing" id="lhI-Ad-H3T"/>
+                            <constraint firstItem="PFZ-6J-Rnn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ow2-Gw-dBw"/>
+                            <constraint firstItem="PFZ-6J-Rnn" firstAttribute="centerX" secondItem="h7q-5E-bdI" secondAttribute="centerX" id="q9R-gW-y7H"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drugiLabel" destination="h7q-5E-bdI" id="MCU-jE-Oqu"/>
+                        <outlet property="trzeciLabel" destination="5yL-iX-yd9" id="5q3-Tx-bP0"/>
+                        <outlet property="witamLbl" destination="PFZ-6J-Rnn" id="7kr-cE-nMf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="388" y="345"/>
         </scene>
     </scenes>
 </document>
